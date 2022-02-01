@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+FILENAME=${1}
+NEWEXT=${2}
+
+NOEXT=`echo ${FILENAME} | rev | cut -d'.' -f2- | rev`
+mv ${FILENAME} ${NOEXT}.${NEWEXT}
